@@ -154,11 +154,13 @@ export class Card extends FASTElement {
 export const CardTemplate: import("@microsoft/fast-element").ViewTemplate<Card, any>;
 
 // @public
-export class Carousel extends FASTElement {
+export class Carousel extends Tabs {
     // (undocumented)
     activeid: string;
     // (undocumented)
     activeidChanged(): void;
+    // (undocumented)
+    activeindicator: boolean;
     // (undocumented)
     arialabel: string;
     // (undocumented)
@@ -169,6 +171,8 @@ export class Carousel extends FASTElement {
     autoplayInterval: number;
     // (undocumented)
     carousel: HTMLDivElement;
+    // (undocumented)
+    change: () => void;
     // (undocumented)
     connectedCallback(): void;
     // (undocumented)
@@ -198,7 +202,9 @@ export class Carousel extends FASTElement {
     // (undocumented)
     rotationControl: HTMLElement;
     // (undocumented)
-    tabs: HTMLElement;
+    tabsChanged(): void;
+    // (undocumented)
+    tabsRef: HTMLElement;
     }
 
 // @public
@@ -731,6 +737,8 @@ export class Tabs extends FASTElement {
     activeIndicatorRef: HTMLElement;
     activetab: HTMLElement;
     adjust(adjustment: number): void;
+    // (undocumented)
+    change: () => void;
     notabfocus: boolean;
     orientation: TabsOrientation;
     // @internal (undocumented)
