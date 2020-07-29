@@ -174,11 +174,9 @@ export class Carousel extends Tabs {
     // (undocumented)
     autoplayInterval: number;
     // (undocumented)
-    basicContentRef: HTMLDivElement;
+    basicContent: HTMLDivElement;
     // (undocumented)
     basicPattern: boolean;
-    // (undocumented)
-    carousel: HTMLDivElement;
     // (undocumented)
     change: () => void;
     // (undocumented)
@@ -190,6 +188,8 @@ export class Carousel extends Tabs {
     // (undocumented)
     focusedChanged(): void;
     // (undocumented)
+    handleDefaultFlipperKeypress: (direction: 1 | -1, e: KeyboardEvent) => void;
+    // (undocumented)
     handleFlipperClick(direction: 1 | -1, e: Event): void;
     // (undocumented)
     handleFlipperKeypress: (direction: 1 | -1, e: KeyboardEvent) => void;
@@ -200,7 +200,9 @@ export class Carousel extends Tabs {
     // (undocumented)
     loop: boolean;
     // (undocumented)
-    nextButtonItem: HTMLElement[];
+    nextFlipperDefault: HTMLElement;
+    // (undocumented)
+    nextFlipperSlottedItem: HTMLElement[];
     notabfocus: boolean;
     // (undocumented)
     nottabfocusChanged(): void;
@@ -209,7 +211,9 @@ export class Carousel extends Tabs {
     // (undocumented)
     pausedChanged(): void;
     // (undocumented)
-    previousButtonItem: HTMLElement[];
+    previousFlipperDefault: HTMLElement;
+    // (undocumented)
+    previousFlipperSlottedItem: HTMLElement[];
     // (undocumented)
     rotationControl: HTMLElement;
     // (undocumented)
@@ -217,9 +221,9 @@ export class Carousel extends Tabs {
     // (undocumented)
     setComponent(): void;
     // (undocumented)
-    tabPanelsRef: HTMLElement;
+    tablistRef: HTMLElement;
     // (undocumented)
-    tabsRef: HTMLElement;
+    tabPanelsContainerRef: HTMLElement;
     }
 
 // @public (undocumented)
@@ -228,15 +232,6 @@ export interface Carousel extends ARIAGlobalStatesAndProperties {
 
 // @public
 export const CarouselTemplate: ViewTemplate<Carousel, any>;
-
-// @public
-export class CarouselTestSlide extends FASTElement {
-    // (undocumented)
-    even: boolean;
-}
-
-// @public
-export const CarouselTestSlideTemplate: import("@microsoft/fast-element").ViewTemplate<CarouselTestSlide, any>;
 
 // @public
 export class Checkbox extends FormAssociated<HTMLInputElement> {
