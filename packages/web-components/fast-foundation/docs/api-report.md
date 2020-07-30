@@ -200,6 +200,8 @@ export class Carousel extends Tabs {
     // (undocumented)
     loop: boolean;
     // (undocumented)
+    nextButtonAriaLabel: string;
+    // (undocumented)
     nextFlipperDefault: HTMLElement;
     // (undocumented)
     nextFlipperSlottedItem: HTMLElement[];
@@ -211,11 +213,15 @@ export class Carousel extends Tabs {
     // (undocumented)
     pausedChanged(): void;
     // (undocumented)
+    previousButtonAriaLabel: string;
+    // (undocumented)
     previousFlipperDefault: HTMLElement;
     // (undocumented)
     previousFlipperSlottedItem: HTMLElement[];
     // (undocumented)
-    rotationControl: HTMLElement;
+    rotationControlContainer: HTMLElement;
+    // (undocumented)
+    rotationControlDefault: HTMLElement;
     // (undocumented)
     rotationControlItem: HTMLElement[];
     // (undocumented)

@@ -40,7 +40,8 @@ export const CarouselTemplate = html<Carousel>`
     aria-roledescription="carousel"
 >
     <div
-        class="rotation-control"
+        class="rotation-control-container"
+        part="rotation-control-container"
         aria-label="${x =>
             x.paused
                 ? "start automatic slide rotation"
@@ -65,7 +66,8 @@ export const CarouselTemplate = html<Carousel>`
         </slot>
     </div>
     <div 
-        class="previous-flipper flipper"
+        class="previous-flipper-container flipper"
+        part="previous-button-container"
         @click=${(x, c) => x.handleFlipperClick(-1, c.event as MouseEvent)}
         @keypress=${(x, c) => x.handleFlipperKeypress(-1, c.event as KeyboardEvent)}
     >
@@ -80,7 +82,8 @@ export const CarouselTemplate = html<Carousel>`
         </slot>
     </div>
     <div
-        class="next-flipper flipper"
+        class="next-flipper-container flipper"
+        part="next-button-container"
         @click=${(x, c) => x.handleFlipperClick(1, c.event as MouseEvent)}
         @keypress=${(x, c) => x.handleFlipperKeypress(1, c.event as KeyboardEvent)}
     >
